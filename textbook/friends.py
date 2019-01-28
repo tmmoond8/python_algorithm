@@ -22,3 +22,5 @@ fr_info = {
 
 
 print(all_friends(fr_info, 'Summer'))
+print()
+print(all_friends(fr_info, 'Jerry'))
