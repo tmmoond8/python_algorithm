@@ -2,15 +2,11 @@ def find_coin(a, start, end):
   lower = upper = 0
   i = start
   mid = (start + end) // 2
-  while(i <= end):
-    if((start + end) % 2 == 0 and i == mid):
-      i += 1
-      continue
-    if(i <= mid):
-      lower += a[i]
-    else :
-      upper += a[i]
-    i += 1
+  for i in range(start, mid + (start + end) % 2):
+    lower += a[i]
+  for i in range(mid + 1, end + 1):
+    upper += a[i]
+  
   if(lower == upper):
     return mid
   elif(lower < upper):
