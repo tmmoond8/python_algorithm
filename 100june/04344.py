@@ -1,9 +1,9 @@
 import sys
 def solve():
-  f = open(__file__[:-2] + 'input', "r")
-  N = int(f.readline())
+  # f = open(__file__[:-2] + 'input', "r")
+  N = int(sys.stdin.readline())
   for i in range(0, N):
-    data = [ int (i) for i in f.readline().split(" ") ]
+    data = [ int (i) for i in sys.stdin.readline().split(" ") ]
     n = int(data.pop(0))
     average = sum(data) / n
     over = 0
