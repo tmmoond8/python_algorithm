@@ -2,12 +2,14 @@ import sys
 read = sys.stdin.readline
 
 OPEN, CLOSE = '(', ')'
-data = read().strip()
+arrangement = read().strip()
+
+OPEN, CLOSE = '(', ')'
 SUM = 0
 stack = 0
 prev = ''
 
-for s in data:
+for s in arrangement:
   if s == CLOSE:
     stack -= 1
     if  prev == OPEN:
