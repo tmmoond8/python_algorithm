@@ -1,13 +1,14 @@
 def all_friends(a, name):
-  qu = list(a[name])
-  done = set()
-  while(qu):
-    item = qu.pop()
-    done.add(item)
-    for i in a[item]:
-      if(i not in done):
-        qu.append(i)
-  return done
+    qu = list(a[name])
+    done = set()
+    while (qu):
+        item = qu.pop()
+        done.add(item)
+        for i in a[item]:
+            if (i not in done):
+                qu.append(i)
+    return done
+
 
 fr_info = {
     'Summer': ['John', 'Justin', 'Mike'],
@@ -19,7 +20,6 @@ fr_info = {
     'Tom': ['Jerry'],
     'Jerry': ['Tom']
 }
-
 
 print(all_friends(fr_info, 'Summer'))
 print()
